@@ -257,8 +257,6 @@ pub async fn parse_next_field_chunk(stream: &mut FieldStream, boundary: &str) ->
         }
         Err(_) => {
             if parse_ctx.exhausted {
-                // FIXME: False-positive clippy; cannot into_iter() on a &mut ref.
-                //        Remove #[allow(clippy::iter_with_drain)] once fixed
                 data = buf.drain(0..buf.len()).collect();
             } else {
                 data = buf[0..(buf.len() - boundary_len)].to_vec();
