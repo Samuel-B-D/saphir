@@ -44,7 +44,7 @@ tracing-instrument = ["tracing", "saphir_macro/tracing-instrument"]
 async-stream = "0.3"
 log = "0.4"
 hyper = { version = "0.14.10", features = ["stream", "server"] }
-tokio = { version = "1", features = ["rt-multi-thread", "net", "sync", "time", "parking_lot"] }
+tokio = { version = "1.13.1", features = ["rt-multi-thread", "net", "sync", "time", "parking_lot"] }
 futures = "0.3"
 futures-util = "0.3"
 saphir-cookie = "0.13"
@@ -77,5 +77,5 @@ env_logger = "0.9"
 serde = "1.0"
 serde_derive = "1.0"
 mime = "0.3"
-tokio = { version = "1", features = ["rt-multi-thread", "net", "sync", "time", "parking_lot", "macros"] } #macros only in dev deps
+tokio = { version = "1.13.1", features = ["rt-multi-thread", "net", "sync", "time", "parking_lot", "macros"] } #macros only in dev deps
 
